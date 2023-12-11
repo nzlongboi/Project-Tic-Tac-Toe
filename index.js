@@ -24,3 +24,10 @@ const player1 = (function() {
 const player2 = (function() {
     const playerToken = 'O';
 })();
+
+
+const gameLogic = (function() {
+    
+
+
+})();
