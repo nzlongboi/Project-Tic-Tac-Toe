@@ -9,7 +9,7 @@
 }
 
 #game-board {
-    border: 5px solid black;
+    box-sizing: border-box;
     border-radius: 3%;
     height: 500px;
     width: 500px;
@@ -24,4 +24,45 @@
 
 .player2 {
     color: red;
+}
+
+body {
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+
+#playingSpace1 {
+    border-right: solid black 2px;
+    border-bottom: solid black 2px;   
+}
+
+#playingSpace2 {
+    border-bottom: solid black 2px;
+}
+
+#playingSpace3 {
+    border-left: solid black 2px;
+    border-bottom: solid black 2px;
+}
+
+#playingSpace4 {
+    border-right: solid black 2px;
+}
+
+#playingSpace6 {
+    border-left: solid black 2px;
+}
+
+#playingSpace7 {
+    border-top: solid black 2px;
+    border-right: solid black 2px;
+}
+
+#playingSpace8 {
+    border-top: solid black 2px;
+}
+
+#playingSpace9 {
+    border-top: solid black 2px;
+    border-left: solid black 2px;
 }
