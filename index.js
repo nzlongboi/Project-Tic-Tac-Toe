@@ -9,33 +9,30 @@ let currentPlayer = 1;
 
 const gameBoardObject = (function() {
     let gameBoardArray = [];
-
-    /*generate gameboard*/
-    for (let i = 0; i < 9; i++) {
-        const playingSpace = document.createElement('div');
-        playingSpace.style.border = '1px solid black';
-        playingSpace.style.boxSizing = 'border-box';
-        playingSpace.style.textAlign = 'center';
-        playingSpace.style.fontSize = '140px';
-        playingSpace.onclick = () => {
-            if (playingSpace.innerText == 'X' || playingSpace.innerText == 'O') {
+    const playingSpace = document.querySelectorAll('.playing-space');
+    
+    playingSpace.forEach(space => {
+        space.onclick = () => {
+            if (space.innerText == 'X' || space.innerText == 'O') {
                 alert('This space is already taken.');
                 return;
             }
-            playingSpace.innerText = 'X';
-            if (displayCurrentPlayer.innerText == '1') {
-                displayCurrentPlayer.innerText = '2';
-            } else if (displayCurrentPlayer.innerText == '2') {
-                displayCurrentPlayer.innerText = '1';
-            }
-            if (displayCurrentPlayer.innerText =='2') {
-                playingSpace.innerText = 'O';
-            }
 
-        }
-        playingBoard.appendChild(playingSpace);
-    }
+            const currentPlayer = displayCurrentPlayer.innerText;
 
+            if (currentPlayer === '1') {
+                space.innerText = 'X';
+            } else if (currentPlayer === '2') {
+                space.innerText = 'O';
+            }
+            
+
+            displayCurrentPlayer.innerText = currentPlayer === '1' ? '2' : '1';
+        };
+
+        space.style.fontSize = '140px';
+        space.style.textAlign = 'center';
+    });
 })();
 
 const player1 = (function() {
