@@ -4,6 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #game-board {
@@ -14,4 +16,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+}
+
+.player1 {
+    color: blue;
+}
+
+.player2 {
+    color: red;
 }
