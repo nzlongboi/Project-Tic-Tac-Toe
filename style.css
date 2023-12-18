@@ -1,6 +1,12 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #container {
     height: 100vh;
-    width: 100vw;
+    width: 50vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,38 +37,38 @@ body {
 }
 
 
-#playingSpace1 {
+#playing-space1 {
     border-right: solid black 2px;
     border-bottom: solid black 2px;   
 }
 
-#playingSpace2 {
+#playing-space2 {
     border-bottom: solid black 2px;
 }
 
-#playingSpace3 {
+#playing-space3 {
     border-left: solid black 2px;
     border-bottom: solid black 2px;
 }
 
-#playingSpace4 {
+#playing-space4 {
     border-right: solid black 2px;
 }
 
-#playingSpace6 {
+#playing-space6 {
     border-left: solid black 2px;
 }
 
-#playingSpace7 {
+#playing-space7 {
     border-top: solid black 2px;
     border-right: solid black 2px;
 }
 
-#playingSpace8 {
+#playing-space8 {
     border-top: solid black 2px;
 }
 
-#playingSpace9 {
+#playing-space9 {
     border-top: solid black 2px;
     border-left: solid black 2px;
 }
