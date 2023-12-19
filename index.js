@@ -9,7 +9,8 @@ const playingSpace6 = document.getElementById('playing-space6');
 const playingSpace7 = document.getElementById('playing-space7');
 const playingSpace8 = document.getElementById('playing-space8');
 const playingSpace9 = document.getElementById('playing-space9');
-let currentPlayer = 1;
+const playingSpace = document.querySelectorAll('.playing-space');
+
 
 
 
@@ -17,7 +18,7 @@ let currentPlayer = 1;
 /*gameboard object*/
 
 const gameBoardObject = (function() {
-    const playingSpace = document.querySelectorAll('.playing-space');
+    
     
     playingSpace.forEach(space => {
         space.onclick = () => {
@@ -73,4 +74,17 @@ const gameBoardObject = (function() {
         }
     }
 
+    
+
+})();
+
+
+(function() {
+    const newGame = document.getElementById('new-game');
+
+        newGame.onclick = () => {
+            playingSpace.forEach(space => {
+                space.innerText = '';
+            });
+        };
 })();
